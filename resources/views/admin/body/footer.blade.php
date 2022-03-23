@@ -1,7 +1,6 @@
 @php
 use Carbon\Carbon;
-    $year = Carbon::now()->format('Y');
-          
+    $year = Carbon::now()->format('Y');         
 @endphp
 <!-- partial:partials/_footer.html -->
 <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">

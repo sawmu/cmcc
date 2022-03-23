@@ -21,25 +21,27 @@ License: For each use you must have a valid license purchased only from above li
 	@include('admin.assetsLink.css')
 
 </head>
-<body>
-	<div class="main-wrapper">
+<body class="theme-cyan">
+    <!-- Page Loader -->
+    {{-- <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30"><img class="zmdi-hc-spin" src="{{ asset('backend/favicon.png')}}" width="48" height="48" alt="Compass"></div>
+            <p>Please wait...</p>
+        </div>
+    </div> --}}
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
 
-		@include('admin.body.sidebar')
-	
-		<div class="page-wrapper">
-					
-			@include('admin.body.header')
 
-			@yield('content')
+	@include('admin.body.header')
+	@include('admin.body.sidebar')
+	@yield('content')
+	@include('admin.body.footer')
 
-			@include('admin.body.footer')
-		
-		</div>
-	</div>
-
+  
 	@include('admin.assetsLink.javascript')
-
-
-
 </body>
+
+
+
 </html>    

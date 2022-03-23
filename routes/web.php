@@ -24,9 +24,11 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('admin.index');
-})->name('dashboard');
+Route::prefix('dashboard')->group(function(){
+    Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
+        return view('admin.index');
+    })->name('dashboard');
+});
 
 Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
@@ -51,8 +53,4 @@ Route::prefix('profile')->group(function(){
     Route::post('store', [ProfileController::class, 'ProfileStore'])->name('profile.store');
     Route::get('password/view', [ProfileController::class, 'PasswordView'])->name('password.view');
     Route::post('password/update', [ProfileController::class, 'PasswordStore'])->name('profile.store');
-
-
-   
-
 });

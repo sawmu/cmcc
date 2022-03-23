@@ -19,6 +19,7 @@ use App\Http\Controllers\backend\ProfileController;
 |
 */
 
+
 Route::get('/', function () {
     return view('auth.login');
 });

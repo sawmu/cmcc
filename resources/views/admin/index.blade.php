@@ -66,8 +66,7 @@
           </div>
       </div>
   
-      <!-- Main Content -->
-      <section class="content home">
+ 
           <div class="block-header">
               <div class="row">
                   <div class="col-lg-7 col-md-6 col-sm-12">
@@ -814,7 +813,7 @@
                   </div>
               </div>
           </div>
-      </section>
+   
 
 
 @endsection

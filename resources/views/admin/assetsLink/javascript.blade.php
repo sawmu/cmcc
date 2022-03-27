@@ -13,7 +13,24 @@
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<!-- Jquery DataTable Plugin Js --> 
+<script src="{{ asset('backend/assets/bundles/datatablescripts.bundle.js')}}"></script>
+<script src="{{ asset('backend/assets/plugins/jquery-datatable/buttons/dataTables.buttons.min.js')}}"></script>
+<script src="{{ asset('backend/assets/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js')}}"></script>
+<script src="{{ asset('backend/assets/plugins/jquery-datatable/buttons/buttons.colVis.min.js')}}"></script>
+<script src="{{ asset('backend/assets/plugins/jquery-datatable/buttons/buttons.flash.min.js')}}"></script>
+<script src="{{ asset('backend/assets/plugins/jquery-datatable/buttons/buttons.html5.min.js')}}"></script>
+<script src="{{ asset('backend/assets/plugins/jquery-datatable/buttons/buttons.print.min.js')}}"></script>
+<script src="{{ asset('backend/assets/js/pages/tables/jquery-datatable.js')}}"></script>
 
+<!-- Moment Plugin Js --> 
+<script src="{{ asset('backend/assets/plugins/momentjs/moment.js')}}"></script> 
+
+<!-- Bootstrap Material Datetime Picker Plugin Js --> 
+<script src="{{ asset('backend/assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js')}}"></script> 
+
+<!-- Jquery Knob Plugin Js -->
+<script src="{{ asset('assets/bundles/knob.bundle.js') }}"></script>
 
 <script type="text/javascript">
 	$(function(){
@@ -65,4 +82,15 @@
   }
 	
   @endif
+</script>
+<script>
+	$(".navbar-toggler").on('click',function() {
+		$("html").toggleClass("nav-open");
+	});
+	//=============================================================================
+	$('.form-control').on("focus", function() {
+		$(this).parent('.input-group').addClass("input-group-focus");
+	}).on("blur", function() {
+		$(this).parent(".input-group").removeClass("input-group-focus");
+	});
 </script>

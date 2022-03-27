@@ -13,14 +13,15 @@
                     <form method="post" action="{{ route('user.store') }}">
                         @csrf
                         <div class="mb-3">
-                            <label for="exampleFormControlSelect1" class="form-label">Select User Type</label>
-                            <select name="usertype" class="form-select" id="exampleFormControlSelect1">
+                            <select name="usertype" class="form-control show-tick" id="exampleFormControlSelect1">
                                 <option selected="" disabled="">Select User Type</option>
                                 <option value="Admin">Admin</option>
                                 <option value="User">User</option>
                                
                             </select> 
                         </div>
+
+    
 
                         <div class="mb-3">
                             <label for="exampleInputText1" class="form-label">Name</label>

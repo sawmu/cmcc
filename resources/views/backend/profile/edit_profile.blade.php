@@ -1,7 +1,7 @@
 @extends('admin.admin_master')
-
-@section('content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+@section('content')
+
 
 <div class="page-content">
 
@@ -11,7 +11,8 @@
 
                 <div class="card-body">
                     <h6 class="card-title">Manage Profile</h6>
-                    <form method="post" action="{{ route('profile.store')}}" enctype="multipart/form-data">
+                    <form method="post" action="{{ route('profile.update')}}" enctype="multipart/form-data">
+
                         @csrf
 
                         <div class="mb-3">

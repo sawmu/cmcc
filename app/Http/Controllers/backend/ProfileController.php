@@ -27,7 +27,7 @@ class ProfileController extends Controller
         return view('backend.profile.edit_profile', compact('editData'));
     }
 
-    public function ProfileStore(Request $request)
+    public function ProfileUpdate(Request $request)
     {
         $data = User::find(Auth::user()->id);
         $data->name = $request->name;
@@ -48,6 +48,8 @@ class ProfileController extends Controller
         $data->save();
         return redirect()->route('profile.view')->with('success', 'Profile Updated Successfully');
     }
+
+    
 
     public function PasswordView()
     {

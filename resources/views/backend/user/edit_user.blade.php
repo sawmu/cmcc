@@ -13,8 +13,7 @@
                     <form method="post" action="{{ route('user.update', $editData->id) }}">
                         @csrf
                         <div class="mb-3">
-                            <label for="exampleFormControlSelect1" class="form-label">Select Input</label>
-                            <select name="usertype" class="form-select" id="exampleFormControlSelect1">
+                            <select name="usertype" class="form-control show-tick" id="exampleFormControlSelect1">
                                 <option selected="" disabled="">Select User Type</option>
                                 <option value="Admin" {{ ($editData->usertype == "Admin" ? "selected" : "") }}>Admin</option>
                                 <option value="User" {{ ($editData->usertype == "User" ? "selected" : "") }}>User</option>
